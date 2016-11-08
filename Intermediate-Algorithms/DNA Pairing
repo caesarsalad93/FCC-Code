@@ -1,0 +1,32 @@
+function pairElement(str) {
+  var x = str.split('');
+
+  for (var i = 0; i < str.length; i++) {
+    switch (x[i]) {
+      case "G":
+        x[i] += "C";
+        break;
+
+      case "C":
+        x[i] += "G";
+        break;
+
+      case "T":
+        x[i] += "A";
+        break;
+
+      case "A":
+        x[i] += "T";
+        break;
+    }
+
+  }
+  var final = [];
+  for (var j = 0; j < str.length; j++) {
+    final.push(x[j].split(''));
+  }
+  return final;
+
+}
+
+pairElement("GCG");
