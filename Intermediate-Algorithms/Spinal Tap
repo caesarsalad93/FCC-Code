@@ -1,0 +1,16 @@
+/*Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes.*/
+
+
+function spinalCase(str) {
+  // "It's such a fine line between stupid, and clever."
+  // --David St. Hubbins
+  var re = /\s|_/g;
+  var re2 = /([a-z])([A-Z])/g;
+  
+  var withSpaces = str.replace(re2, "$1 $2");
+  withSpaces = withSpaces.toLowerCase();
+  
+  return withSpaces.replace(re, "-");
+}
+
+spinalCase('AllThe-small Things');
