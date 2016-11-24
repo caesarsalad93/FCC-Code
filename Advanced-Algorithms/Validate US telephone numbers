@@ -1,0 +1,23 @@
+//
+
+function telephoneCheck(str) {
+
+  //Function to check if there are 10 digits
+  function checkTen(str) {
+    var numDigits = 0;
+    var array = str.split('');
+    for (var every in array) {
+      if (!isNaN(array[every])) {
+        numDigits += 1;
+      }
+    }
+    if (numDigits === 10) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  return checkTen(str);
+}
+
+telephoneCheck("555-555-555555555");
